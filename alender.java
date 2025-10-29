@@ -15,16 +15,16 @@ public class alender {
 
         System.out.println("\nSu  Mo  Tu  We  Th  Fr  Sa");
 
-        int dayOfWeek = firstDay.getDayOfWeek().getValue();
-        if (dayOfWeek == 7) {
-            dayOfWeek = 0;
-        }
+         int dayOfWeek = firstDay.getDayOfWeek().getValue() ;
+        // if (dayOfWeek == 7) {
+        //     dayOfWeek = 0;
+        // }
 
-        for (int i = 0; i < dayOfWeek; i++) {
+        for (int i = 1; i < dayOfWeek; i++) {
             System.out.print("    ");
         }
 
-        for (int day = 1; day <= firstDay.lengthOfMonth(); day++) {
+        for (int day = 0; day <= firstDay.lengthOfMonth(); day++) {
             System.out.printf("%2d  ", day);
             if ((day + dayOfWeek) % 7 == 0) {
                 System.out.println();
